@@ -51,7 +51,7 @@ section.menu {
 }
 .menu__header {
   display: flex;
-
+  gap: 0.5rem;
   font-size: 16px;
   align-items: center;
 }
@@ -63,6 +63,14 @@ section.menu {
 .menu__list__item {
   font-size: 16px;
   line-height: 19px;
+}
+.menu__list__item:hover,
+.title__network__item:hover {
+  transform: scale(1.08);
+}
+.menu__list__item > a:hover,
+.title__network__item > a:hover {
+  color: #2a7ae4;
 }
 .menu__list__item:last-child {
   font-weight: 700;
@@ -266,6 +274,11 @@ section.experience {
   background-color: #2a7ae4;
   color: white;
 }
+.experience__botao--demo:hover,
+.experiencia__botao--repo:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
 /*Contacto*/
 
 section.formcontato {
@@ -314,7 +327,6 @@ section.formcontato {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 
 .formcontato__input,
@@ -323,8 +335,10 @@ section.formcontato {
   height: 3rem;
   outline: none;
   border: none;
+  border-bottom: 1px solid #8c8c8c;
 }
 .formcontato__input {
+  margin-top: 2rem;
   vertical-align: middle;
 }
 .formcontato__input:focus,
@@ -333,13 +347,38 @@ section.formcontato {
 }
 
 .formcontato__textarea {
+  margin-top: 2rem;
   height: 6rem;
 }
 .formcontato__botao {
+  margin-top: 2rem;
   padding: 1rem;
   width: 144px;
+  border: none;
+  font-size: 1rem;
+}
+.formcontato__botao:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
+.formcontato__input.error {
+  border: 1px solid red;
+}
+.error::after {
+  margin: 0;
+  content: "Máximo 50 caracteres";
+  font-size: smaller;
+  color: red;
+  margin-bottom: 2rem;
+}
+.error-empty::after {
+  margin: 0;
+  content: "No campo vacio";
+  font-size: smaller;
+  color: red;
+  margin-bottom: 2rem;
+}
 /*footeer*/
 
 section.footer {
